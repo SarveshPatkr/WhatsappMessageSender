@@ -25,5 +25,3 @@ def send(name, message, waiting_time):
 
     pyautogui.press('enter')
     return "Message sent Successfully"
-
-send("Name 1", "hi how are you", 2)
