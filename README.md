@@ -1,4 +1,4 @@
-# WhatsappMessageSender
+# WhatsappMessageSender For Windows
 
 **WhatsappMessageSender** is a Python toolkit for managing contacts and sending WhatsApp messages on WhatsApp Desktop App.
 
