@@ -2,6 +2,49 @@
 
 **WhatsappMessageSender** is a Python toolkit for managing contacts and sending WhatsApp messages on WhatsApp Desktop App.
 
+## Usage
+
+### GUI
+
+You can use `gui.py` to add or remove contacts from your `contact.json` file by running the following command in your terminal:
+```cmd
+python gui.py
+```
+
+### Contacts
+
+To find a contact's phone number, use the `find_phone_number(name, file_path)` function from `contacts.py`. This function takes a name and a file path for the `contact.json` file and returns the contact's phone number.
+
+Here's an example of how to import `find_phone_number`:
+
+```python
+from contacts import find_phone_number
+```
+
+### Sending messages
+
+To send a WhatsApp message, use the `send(name, message, waiting_time)` function from `whatsapp.py`. This function takes the name of the contact you want to send the message to, the message itself, and a waiting time in seconds before sending the message.
+
+Here's an example of how to import `send`:
+
+```python
+from whatsapp import send
+```
+
+To send a message, use the following code:
+
+```python
+name = "Name 1"
+message = "Hello, World!"
+waiting_time = 2  # seconds
+
+send(name, message, waiting_time)
+```
+
+This will send a WhatsApp message from your device's WhatsApp Desktop App.
+
+## Contact Format
+
 Contacts are saved in `contact.json` file in the following format:
 
 ```json
@@ -16,51 +59,6 @@ Contacts are saved in `contact.json` file in the following format:
     }
 ]
 ```
-
-## Usage
-
-### GUI
-
-`gui.py` file is provided for you to enter and delete contacts from `contact.json` file.
-```cmd
-python ./gui.py
-```
-
-### Contacts
-
-`contacts.py` module provides `find_phone_number(name, file_path)` function which takes name and file path for `contact.json` file. This function returns only the number if it exists in the `contact.json`. 
-
-To import `find_phone_number`, use the following code:
-
-```python
-from contacts import find_phone_number
-```
-
-### Sending messages
-
-`whatsapp.py` module provides `send(name, message, waiting_time)` function which takes name, message, and waiting time in seconds before sending the message. 
-
-To import `send`, use the following code:
-
-```python
-from whatsapp import send
-```
-
-## Example
-
-To send a WhatsApp message, use the following code:
-
-```python
-from whatsapp import send
-
-name = "Name 1"
-message = "Hello, World!"
-waiting_time = 2  # seconds
-
-send(name, message, waiting_time)
-```
-
-This will send a WhatsApp message from your device's WhatsApp Desktop App.
 
 ## Use Cases
 - If you don't want to create a WhatsApp API key, this toolkit provides a simple and easy way to send messages using your WhatsApp Desktop app.
